@@ -1,70 +1,116 @@
-# Getting Started with Create React App
+# 🧪 MiniMercados App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este projeto é um **teste prático para estudos de React e Firebase**, com foco no uso do **Realtime Database**. O objetivo é aprender a integrar um app React com o backend do Firebase, realizando operações de leitura, criação, edição e remoção de dados em tempo real.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 📚 Tecnologias Utilizadas
 
-### `npm start`
+- ⚛️ React (Vite ou Create React App)
+- 🔥 Firebase Realtime Database
+- 💅 Bootstrap 5 (opcional para estilização)
+- 📦 Formik + Yup (para formulários e validação)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 💡 Objetivo
 
-### `npm test`
+Criar um pequeno sistema de cadastro de empresas do ramo de mini mercados. O sistema permite:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- ✅ Visualizar empresas cadastradas
+- ➕ Adicionar novas empresas
+- ✏️ Editar dados das empresas
+- ❌ Remover empresas
+- 📁 Sincronização em tempo real com o Firebase
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🏗️ Estrutura do Banco de Dados (Firebase)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```json
+{
+  "empresas": {
+    "behonest": {
+      "nome": "Behonest",
+      "lojas": 400,
+      "estados": 3
+    },
+    "market4you": {
+      "nome": "Market4You",
+      "lojas": 2000,
+      "estados": 5
+    }
+  }
+}
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 🔧 Como rodar o projeto
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Pré-requisitos:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Node.js (v18 ou superior)
+- npm ou yarn
+- Firebase configurado com Realtime Database habilitado
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Passos:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Clone o repositório
 
-## Learn More
+```bash
+git clone https://github.com/seu-usuario/mini-mercados-app.git
+cd mini-mercados-app
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+2. Instale as dependências
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+npm install
+```
 
-### Code Splitting
+3. Configure o Firebase
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Edite o arquivo `src/firebase.js` com as suas credenciais do Firebase:
 
-### Analyzing the Bundle Size
+```js
+const firebaseConfig = {
+  apiKey: "SUA_API_KEY",
+  authDomain: "SEU_AUTH_DOMAIN",
+  databaseURL: "SUA_DATABASE_URL",
+  projectId: "SEU_PROJECT_ID",
+  storageBucket: "SEU_STORAGE_BUCKET",
+  messagingSenderId: "SEU_SENDER_ID",
+  appId: "SEU_APP_ID"
+};
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+4. Rode o projeto
 
-### Making a Progressive Web App
+```bash
+npm run dev
+# ou
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Acesse: [http://localhost:3000](http://localhost:3000)
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## ✨ Funcionalidades futuras (opcional)
 
-### Deployment
+- 🔐 Autenticação de usuários
+- 📱 Layout responsivo com Tailwind ou Bootstrap
+- 📊 Dashboard com gráficos (Chart.js ou Recharts)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## 👩‍💻 Desenvolvido por
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Alice Antunes Salim — *para fins acadêmicos e experimentação com Firebase Realtime Database e React.*
+
+---
+
+## 📝 Licença
+
+Este projeto está licenciado sob a licença MIT.
